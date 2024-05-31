@@ -22,3 +22,15 @@
     flag
 )
 (prime?) var
+
+(
+    (number) var
+    (
+        number ( ) concat 
+        (is a prime number.) concat
+    ) (
+        number ( ) concat 
+        ( is not a prime number.) concat
+    ) number prime? eval if
+)
+(check) var
