@@ -7,11 +7,12 @@
 <body>
 
 <div class="shell">
-    <h1>StackOS　Rize</h1>
-    <form id="myForm">
-        <input type="text" id="code">
+    <h1>StackOS Rize</h1>
+    <form id="shell">
+        <textarea id="code" cols="25" rows="9"></textarea>
     </form>
-    <div id="result">It will display execution result here</div>
+
+    <textarea id="result" cols="25" rows="7"></textarea>
 </div>
     
 </body>
@@ -19,7 +20,7 @@
 <script type="text/javascript">
     const code = document.getElementById('code'); 
     document.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
+        if (event.ctrlKey && event.key === "Enter") {
             submitForm();
         } else {
             code.focus();
@@ -42,15 +43,25 @@ body {
     height: 100vh;
     text-align: left;
     overflow: hidden;
+}
 
-    color: azure;
-    text-shadow: 
-      -1px -1px 0 black,  
-       1px -1px 0 black,
-      -1px  1px 0 black,
-       1px  1px 0 black; /* テキストシャドウを枠線のように使用 */
-
+textarea, h1 {
+    color:darkviolet;
     font-family: "Meiryo", sans-serif;
+}
+
+h1 {
+    font-size: 8vh;
+    text-shadow: 2px 2px 1px #000000;
+    font-weight: lighter;
+}
+
+textarea {
+    background: transparent;
+}
+
+form {
+    margin-bottom: 4vh;
 }
 
 .shell {
