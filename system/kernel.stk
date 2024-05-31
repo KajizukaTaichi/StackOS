@@ -16,7 +16,7 @@
 
         # JavaScript code to show result #
         (document.getElementById("result").innerHTML = "{}";)
-        ({}) result replace replace
+        ({}) result replace
     )]
 ] (window) var
 
