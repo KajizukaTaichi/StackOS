@@ -1,9 +1,12 @@
 #
-    This is kernel of StackOS Imitatio
+    This is kernel of StackOS Rize
     (c) 2024 Kajizuka Taichi. All rights reserved
 #
 
-[(Stack OS Imitatio)
+[(Stack OS Rize)
+    [(width) 1000]
+    [(height) 570]
+
     [(layout)]
 
     #Main code of kernel #
