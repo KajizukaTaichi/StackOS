@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+
+<body>
+
+<h1>StackOS　Imitatio</h1>
+
+<form id="myForm">
+    <label for="code">Console: </label>
+    <input type="text" id="code">
+    <button type="button" onclick="submitForm()">Run</button>
+</form>
+<div id="result">It will display execution result here</div>
+
+</body>
+
+<script type="text/javascript">
+    function submitForm() {
+        const code = document.getElementById('code').value;
+        window.external.invoke(code);
+    }
+</script>
+
+<style>
+body {
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.iNtriePyRR1fwWDu2wnLfgHaEx%26pid%3DApi&f=1&ipt=5e0c16042704eba1dbb191f4cb4950f71c5841cdeb3607abfd7a3ccf34be1dd2&ipo=images'); /* 画像のパスを指定 */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+
+    color: azure;
+    text-shadow: 
+      -1px -1px 0 black,  
+       1px -1px 0 black,
+      -1px  1px 0 black,
+       1px  1px 0 black; /* テキストシャドウを枠線のように使用 */
+
+    font-family: "Meiryo", sans-serif;
+}
+</style>
+
+</html>

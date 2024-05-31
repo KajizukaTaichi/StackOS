@@ -1,0 +1,28 @@
+#
+    This is kernel of StackOS Imitatio
+    (c) 2024 Kajizuka Taichi. All rights reserved
+#
+
+[(Stack OS Imitatio)
+    [(layout)]
+
+    #Main code of kernel #
+    [(code) (
+        # Run system call #
+        (cmd) var cmd eval (result) var
+
+        # JavaScript code to show result #
+        (document.getElementById("result").innerHTML = "{}";)
+        ({}) result replace
+    )]
+] (window) var
+
+window [
+    # Read user-interface #
+    (./system/ui.html) read-file
+] instance (kernel) var
+
+# Move home directory #
+(home) cd
+
+kernel gui
