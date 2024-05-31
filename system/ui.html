@@ -6,32 +6,41 @@
 
 <body>
 
-<h1>StackOS　Imitatio</h1>
-
-<form id="myForm">
-    <label for="code">Console: </label>
-    <input type="text" id="code">
-    <button type="button" onclick="submitForm()">Run</button>
-</form>
-<div id="result">It will display execution result here</div>
-
+<div class="shell">
+    <h1>StackOS　Rize</h1>
+    <form id="myForm">
+        <input type="text" id="code">
+    </form>
+    <div id="result">It will display execution result here</div>
+</div>
+    
 </body>
 
 <script type="text/javascript">
+    const code = document.getElementById('code'); 
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            submitForm();
+        } else {
+            code.focus();
+        }
+    });
+
     function submitForm() {
-        const code = document.getElementById('code').value;
-        window.external.invoke(code);
+        window.external.invoke(code.value);
     }
 </script>
 
 <style>
 body {
-    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.iNtriePyRR1fwWDu2wnLfgHaEx%26pid%3DApi&f=1&ipt=5e0c16042704eba1dbb191f4cb4950f71c5841cdeb3607abfd7a3ccf34be1dd2&ipo=images'); /* 画像のパスを指定 */
+    background-image: url('https://wallup.net/wp-content/uploads/2018/09/26/181295-anime_girls-Gochuumon_wa_Usagi_Desu_ka-Tedeza_Rize.jpg');
     background-size: cover; 
     background-repeat: no-repeat;
     
+    margin: 0px;
+    padding: 0px;
     height: 100vh;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
 
     color: azure;
@@ -42,6 +51,10 @@ body {
        1px  1px 0 black; /* テキストシャドウを枠線のように使用 */
 
     font-family: "Meiryo", sans-serif;
+}
+
+.shell {
+    margin: 10vh;
 }
 </style>
 
