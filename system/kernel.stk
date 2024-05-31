@@ -3,7 +3,7 @@
     (c) 2024 Kajizuka Taichi. All rights reserved
 #
 
-[(Stack OS Rize)
+[(StackOS Rize)
     [(width) 1000]
     [(height) 570]
 
@@ -16,7 +16,7 @@
 
         # JavaScript code to show result #
         (document.getElementById("result").innerHTML = "{}";)
-        ({}) result replace
+        ({}) result replace replace
     )]
 ] (window) var
 
@@ -25,7 +25,10 @@ window [
     (./system/ui.html) read-file
 ] instance (kernel) var
 
+((c) 2024 Kajizuka Taichi. All rights reserved) 
+(license) var
+
 # Move home directory #
-(home) cd
+(home) cd pop
 
 kernel gui
