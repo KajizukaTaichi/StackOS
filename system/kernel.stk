@@ -9,10 +9,9 @@
 
     [(layout)]
 
-    #Main code of kernel #
     [(code) (
-        # Run system call #
-        (cmd) var cmd eval (result) var
+        # Evaluate system call #
+        (system-call) var system-call eval (result) var
 
         # JavaScript code to show result #
         (document.getElementById("result").innerHTML = "{}";)
@@ -25,6 +24,7 @@ window [
     (./system/ui.html) read-file
 ] instance (kernel) var
 
+# Include license information #
 ((c) 2024 Kajizuka Taichi. All rights reserved) 
 (license) var
 
