@@ -22,6 +22,20 @@
     document.addEventListener("keydown", function(event) {
         if (event.ctrlKey && event.key === "Enter") {
             submitForm();
+        } else if (event.key === "Tab") {
+            event.preventDefault();
+            
+            let textarea = event.target;
+            let start = textarea.selectionStart;
+            let end = textarea.selectionEnd;
+
+            let indent = '    ';
+
+            let textBeforeTab = textarea.value.substring(0, start);
+            let textAfterTab = textarea.value.substring(end);
+            textarea.value = textBeforeTab + indent + textAfterTab;
+
+            textarea.selectionStart = textarea.selectionEnd = start + indent.length;
         } else {
             code.focus();
         }
